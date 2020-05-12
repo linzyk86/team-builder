@@ -12,13 +12,14 @@ const Form = props=>{
         setTeamMember({
             ...teamMember, [event.target.name]:event.target.value
         })
-        console.log(teamMember)
     }
     return(
     <form onSubmit = {event=>{
         event.preventDefault();
         props.addTeamMember(teamMember)
-        setTeamMember({name:"", email:"", role:"", id:Date.now()})
+        setTeamMember({name:"", email:"", role:"", id:Date.now()
+        })
+        console.log(teamMember)
     }}>
 
         <label htmlFor = "name">Name:</label>
